@@ -1,0 +1,1 @@
+Randomly generated Aalto University logos.
