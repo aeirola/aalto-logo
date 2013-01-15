@@ -1,0 +1,374 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: (Axel Eirola)
+%%Title: (Aalto random linetoogo)
+%%CreationDate: 18.2.2010
+%%DocumentData: Clean7Bit
+%%Origin: 0 0
+%%BoundingBox: 0 0 252 240
+%%LanguageLevel: 2
+%%Pages: 1
+% A PostScript copy of the Aalto university logo that pseudorandomly chooses
+% a color and charater for the logo every time the document is rendered. 
+% Pseudorandomness is provided by the system time. Obviously the effect is
+% lost when converted to PDF or similar.
+%
+% This document is licensed under the WTFPLv2 (http://sam.zoy.org/wtfpl/COPYING)
+
+%%EndComments
+
+%%BeginProlog
+
+% Randomize (not a definition)
+/realtime where { pop realtime } { 1 } ifelse srand   % Get seed from systime
+
+% Paths for characters
+/! {
+  147.516 99.622 moveto
+  163.262 99.622 lineto
+  163.262 115.364 lineto
+  147.516 115.364 lineto
+  147.516 99.622 lineto
+  closepath
+
+  163.762 145.005 moveto
+  163.762 169.063 lineto
+  147.047 169.063 lineto
+  147.047 145.005 lineto
+  150.457 120.946 lineto
+  159.695 120.946 lineto
+  163.762 145.005 lineto
+  closepath
+} def
+
+/" {
+  137.527 153.164 moveto
+  145.602 153.164 lineto
+  145.602 148.156 142.059 144.938 137.527 144.648 curveto
+  137.527 136.77 lineto
+  147.102 137.297 154.238 143.73 154.238 155.723 curveto
+  154.238 169.863 lineto
+  137.527 169.863 lineto
+  137.527 153.164 lineto
+  closepath
+
+  159.809 153.164 moveto
+  167.883 153.164 lineto
+  167.883 148.156 164.34 144.938 159.809 144.648 curveto
+  159.809 136.77 lineto
+  169.383 137.297 176.52 143.73 176.52 155.723 curveto
+  176.52 169.863 lineto
+  159.809 169.863 lineto
+  159.809 153.164 lineto
+  closepath
+} def
+
+
+/? {
+  185.059 150.781 moveto
+  185.059 164.168 174.402 171.656 159.133 171.656 curveto
+  144.367 171.656 132.961 164 132.961 150.461 curveto
+  132.961 148.285 lineto
+  148.586 148.285 lineto
+  148.586 154.758 152.973 157.645 158.938 157.645 curveto
+  164.434 157.645 168.316 154.715 168.316 150.234 curveto
+  168.316 146.66 166.277 144.246 161.75 141.691 curveto
+  155.18 137.992 151.168 133.664 151.168 123.312 curveto
+  151.168 121.777 lineto
+  166.867 121.777 lineto
+  166.867 122.406 lineto
+  166.867 127.949 168.434 130.078 174.223 133.895 curveto
+  179.465 137.355 185.059 142.035 185.059 150.781 curveto
+  closepath
+
+  166.867 115.337 moveto
+  151.152 115.337 lineto
+  151.152 99.622 lineto
+  166.867 99.622 lineto
+  166.867 115.337 lineto
+  closepath
+} def
+
+% Random integer function
+/randInteger {rand exch mod} def                 % rand % n function
+
+% Colors
+/red [237 255 div 41 255 div 57 255 div] def          % Define aalto red
+/blue [0 255 div 101 255 div 189 255 div] def         % Define aalto blue
+/yellow [254 255 div 203 255 div 0 255 div] def       % Define aalto yellow
+/Colors [red blue yellow] def                    % Store in array
+/nColors Colors length def                            % Number of colors
+
+% Print random character
+/Char 3 randInteger def                               % Only run once
+/randChar {
+  Char 0 eq {!} if
+  Char 1 eq {?} if
+  Char 2 eq {"} if
+} def
+
+% Set random color
+/randColor {
+  Colors nColors randInteger get                      % Get color array
+  aload pop                                           % Unpack color array
+  setrgbcolor                                         % Set unpacked color
+} def
+
+%%EndProlog
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox: 0 0 252 240
+%%EndPageSetup
+
+
+% Actual code to draw the logo
+
+% Lower text
+% A
+77.172 76.18 moveto
+77.77 73.965 lineto
+80.578 73.965 lineto
+77.074 84.984 lineto
+73.984 84.984 lineto
+70.137 73.965 lineto
+72.828 73.965 lineto
+73.523 76.18 lineto
+77.172 76.18 lineto
+closepath
+% A hole
+76.629 78.211 moveto
+74.133 78.211 lineto
+75.473 82.523 lineto
+76.629 78.211 lineto
+closepath
+%...
+83.781 79.434 moveto
+83.879 80.078 84.344 80.391 85.188 80.391 curveto
+85.961 80.391 86.426 80.109 86.426 79.648 curveto
+86.426 79.332 86.242 79.188 85.715 79.102 curveto
+84.441 78.887 lineto
+82.211 78.523 81.27 77.746 81.27 76.262 curveto
+81.27 74.758 82.445 73.75 84.195 73.75 curveto
+85.152 73.75 85.699 73.949 86.492 74.594 curveto
+86.574 74.297 86.574 74.246 86.672 73.965 curveto
+89.066 73.965 lineto
+88.805 74.363 88.77 74.477 88.77 75.336 curveto
+88.77 79.004 lineto
+88.77 80.191 88.555 80.82 87.977 81.332 curveto
+87.348 81.895 86.426 82.176 85.219 
+82.176 curveto
+82.973 82.176 81.832 81.285 81.684 79.434 curveto
+83.781 79.434 lineto
+closepath
+
+86.492 76.543 moveto
+86.109 75.863 85.547 75.535 84.773 75.535 curveto
+84.047 75.535 83.582 75.848 83.582 76.375 curveto
+83.582 76.855 83.945 77.137 84.789 77.336 curveto
+85.633 77.516 lineto
+86.027 77.602 86.242 77.664 86.492 77.766 curveto
+86.492 76.543 lineto
+closepath
+
+93.117 84.984 moveto
+90.77 84.984 lineto
+90.77 73.965 lineto
+93.117 73.965 lineto
+93.117 84.984 lineto
+closepath
+
+99.477 81.844 moveto
+98.039 81.844 lineto
+98.039 84.371 lineto
+95.691 84.371 lineto
+95.691 81.844 lineto
+94.57 81.844 lineto
+94.57 80.191 lineto
+95.691 80.191 lineto
+95.691 76.559 lineto
+95.691 75.32 95.793 74.891 96.156 74.492 curveto
+96.5 74.113 97.012 73.965 98.039 73.965 curveto
+99.477 73.965 lineto
+99.477 75.734 lineto
+98.633 75.734 lineto
+98.086 75.734 98.039 75.832 98.039 77.09 curveto
+98.039 80.191 lineto
+99.477 80.191 lineto
+99.477 81.844 lineto
+closepath
+
+104.746 82.16 moveto
+102.27 82.16 100.516 80.406 100.516 77.965 curveto
+100.516 75.484 102.27 73.75 104.746 73.75 curveto
+107.207 73.75 108.992 75.484 108.992 77.898 curveto
+108.992 80.426 107.273 82.16 104.746 82.16 curveto
+104.746 80.293 moveto
+105.953 80.293 106.629 79.449 106.629 77.914 curveto
+106.629 76.477 105.934 75.617 104.746 75.617 curveto
+103.555 75.617 102.879 76.477 102.879 77.965 curveto
+102.879 79.434 103.555 80.293 104.746 80.293 curveto
+116 79.102 moveto
+110.609 79.102 lineto
+110.609 76.988 lineto
+116 76.988 lineto
+116 79.102 lineto
+closepath
+
+122.793 81.945 moveto
+121.75 78.344 lineto
+121.57 77.633 121.438 77.09 121.336 76.559 curveto
+121.238 76.871 lineto
+121.055 77.535 121.055 77.551 120.824 78.293 curveto
+119.652 81.945 lineto
+117.141 81.945 lineto
+119.77 75.238 lineto
+120.047 74.543 120.066 74.492 120.066 74.215 curveto
+120.066 73.52 119.688 73.203 118.859 73.203 curveto
+118.164 73.203 lineto
+118.164 71.438 lineto
+119.535 71.438 lineto
+121.32 71.438 121.699 71.77 122.445 73.898 curveto
+125.219 81.945 lineto
+122.793 81.945 lineto
+closepath
+
+128.887 84.984 moveto
+126.539 84.984 lineto
+126.539 73.965 lineto
+128.887 73.965 lineto
+128.887 84.984 lineto
+closepath
+
+133.461 81.945 moveto
+131.117 81.945 lineto
+131.117 73.965 lineto
+133.461 73.965 lineto
+133.461 81.945 lineto
+closepath
+
+133.461 84.984 moveto
+131.117 84.984 lineto
+131.117 83.051 lineto
+133.461 83.051 lineto
+133.461 84.984 lineto
+closepath
+
+139.277 82.16 moveto
+136.801 82.16 135.047 80.406 135.047 77.965 curveto
+135.047 75.484 136.801 73.75 139.277 73.75 curveto
+141.738 73.75 143.523 75.484 143.523 77.898 curveto
+143.523 80.426 141.805 82.16 139.277 82.16 curveto
+139.277 80.293 moveto
+140.484 80.293 141.16 79.449 141.16 77.914 curveto
+141.16 76.477 140.469 75.617 139.277 75.617 curveto
+138.09 75.617 137.41 76.477 137.41 77.965 curveto
+137.41 79.434 138.09 80.293 139.277 80.293 curveto
+145.109 81.945 moveto
+145.109 71.438 lineto
+147.457 71.438 lineto
+147.457 74.609 lineto
+148.117 73.996 148.727 73.75 149.602 73.75 curveto
+151.699 73.75 153.105 75.438 153.105 77.98 curveto
+153.105 80.457 151.684 82.16 149.586 82.16 curveto
+148.594 82.16 148.016 81.863 147.34 81.004 curveto
+147.406 81.945 lineto
+145.109 81.945 lineto
+closepath
+
+149.074 80.258 moveto
+150.148 80.258 150.793 79.367 150.793 77.93 curveto
+150.793 76.543 150.117 75.648 149.09 75.648 curveto
+148.035 75.648 147.371 76.543 147.371 77.965 curveto
+147.371 79.367 148.035 80.258 149.074 80.258 curveto
+157.234 81.945 moveto
+154.887 81.945 lineto
+154.887 73.965 lineto
+157.234 73.965 lineto
+157.234 81.945 lineto
+closepath
+
+157.234 84.984 moveto
+154.887 84.984 lineto
+154.887 83.051 lineto
+157.234 83.051 lineto
+157.234 84.984 lineto
+closepath
+
+166.09 79.551 moveto
+165.891 81.234 164.637 82.16 162.586 82.16 curveto
+160.473 82.16 159.184 81.184 159.184 79.582 curveto
+159.184 78.309 159.863 77.664 161.613 77.285 curveto
+163.066 76.953 lineto
+163.695 76.809 163.957 76.594 163.957 76.23 curveto
+163.957 75.766 163.461 75.453 162.738 75.453 curveto
+161.793 75.453 161.297 75.816 161.168 76.559 curveto
+158.969 76.559 lineto
+159.102 74.789 160.473 73.75 162.688 73.75 curveto
+164.902 73.75 166.273 74.809 166.273 76.492 curveto
+166.273 77.137 166.055 77.73 165.676 78.094 curveto
+165.328 78.457 164.836 78.676 163.859 78.871 curveto
+162.391 79.188 lineto
+161.645 79.352 161.414 79.5 161.414 79.797 curveto
+161.414 80.191 161.859 80.457 162.539 80.457 curveto
+163.316 80.457 163.793 80.145 163.895 79.551 curveto
+166.09 79.551 lineto
+closepath
+
+172.234 81.844 moveto
+170.797 81.844 lineto
+170.797 84.371 lineto
+168.453 84.371 lineto
+168.453 81.844 lineto
+167.328 81.844 lineto
+167.328 80.191 lineto
+168.453 80.191 lineto
+168.453 76.559 lineto
+168.453 75.32 168.551 74.891 168.914 74.492 curveto
+169.262 74.113 169.773 73.965 170.797 73.965 curveto
+172.234 73.965 lineto
+172.234 75.734 lineto
+171.395 75.734 lineto
+170.848 75.734 170.797 75.832 170.797 77.09 curveto
+170.797 80.191 lineto
+172.234 80.191 lineto
+172.234 81.844 lineto
+closepath
+
+177.652 82.16 moveto
+175.176 82.16 173.426 80.406 173.426 77.965 curveto
+173.426 75.484 175.176 73.75 177.652 73.75 curveto
+180.113 73.75 181.898 75.484 181.898 77.898 curveto
+181.898 80.426 180.18 82.16 177.652 82.16 curveto
+177.652 80.293 moveto
+178.859 80.293 179.535 79.449 179.535 77.914 curveto
+179.535 76.477 178.844 75.617 177.652 75.617 curveto
+176.465 75.617 175.785 76.477 175.785 77.965 curveto
+175.785 79.434 176.465 80.293 177.652 80.293 curveto
+closepath
+fill
+
+% The A
+140.988 99.622 moveto
+116.398 169.067 lineto
+95.445 169.067 lineto
+70.855 99.622 lineto
+88.309 99.622 lineto
+92.562 111.907 lineto
+119.285 111.907 lineto
+123.539 99.622 lineto
+140.988 99.622 lineto
+closepath
+
+114.488 125.77 moveto
+97.359 125.77 lineto
+105.922 150.509 lineto
+114.488 125.77 lineto
+fill
+
+% The character
+randColor
+randChar
+fill
+
+%%Trailer
+%%EOF
