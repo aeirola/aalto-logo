@@ -17,4 +17,4 @@ The randomisation is performed within the PostScript language. Character forms a
 PDF
 ---
 
-PDF support is not yet implemented, but possible using ActionScript in the file. Sadly, executable ActionScript is not supported by many viewers.
+PDF support is not yet implemented, but possible using PDF Actions or JavaScript in the file. Sadly, these Actions are not supported by all PDF viewers.
