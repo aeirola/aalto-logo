@@ -25,14 +25,14 @@ endobj
 
 % Page
 4 0 obj 
-  << /Type 
-    /Page
+  << /Type /Page
     /Parent 3 0 R 
     /MediaBox [0 0 150 150] 
     /Contents 5 0 R 
     /Resources	<<	/ProcSet	6 0 R 
-                    /Font << /F1 8 0 R >>
+                    /Font << /F1 7 0 R >>
                 >>
+    /AA 9 0 R
   >>
 endobj
 
@@ -42,7 +42,7 @@ endobj
   stream 
     BT
       /F1 72 Tf           % Set font
-      10 40 Td (A) Tj     % Write A
+      40 60 Td (A) Tj     % Write A
       1 0 0 rg            % Set color
       52 00 Td 6 0 R (!) Tj Tj   % Write char
     ET
@@ -68,23 +68,22 @@ endobj
   7 0 R
 endobj
 
-9 0 obj         % Action 
+9 0 obj         % Action executed on page open
   << /Type /Action
      /S /JavaScript
-     /JS 10 0 R
+     /JS (
+             app.alert({
+             cMsg: "Error! Try again!", cTitle: "Acme Testing Service"
+             });
+             console.clear(); 
+             console.show(); 
+             console.println("HELLO WORLD!");
+        )
   >>
 endobj
 
-10 0 obj
-  << /Length 200 >>
-  stream
-    console.clear(); console.show(); 
-    console.println("HELLO WORLD!");
-  endstream
-endobj
-
 trailer 
-  <<
+  << /Size 9
     /Root 1 0 R
   >> 
 %%EOF
