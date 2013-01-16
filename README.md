@@ -18,5 +18,5 @@ PDF
 ---
 
 PDF support is not yet implemented. The PDF specification does not directly support a source of randomness. There are some possibilities for this:
- * Embedding JavaScript in an page load action. But this is, for security reasons, not supported by many viewers.
- * Using a custom font that produces random character. This would work using PostScript fonts, but would not enable color. 
+ * Embedding JavaScript in an page load action. Unsure if this can actually affect the content of the PDF. Additionally, this is, for security reasons, not supported by many viewers.
+ * Using a custom font that produces random character. This would work using PostScript Type 3 fonts in the same way the PostScript randomisation works. Unfortunately very few readers support the Type 3 specificaiton.

@@ -32,7 +32,6 @@ endobj
     /Resources	<<	/ProcSet	6 0 R 
                     /Font << /F1 7 0 R >>
                 >>
-    /AA 9 0 R
   >>
 endobj
 
@@ -42,9 +41,9 @@ endobj
   stream 
     BT
       /F1 72 Tf           % Set font
-      40 60 Td (A) Tj     % Write A
+      40 60 Td (a) Tj     % Write A
       1 0 0 rg            % Set color
-      52 00 Td 6 0 R (!) Tj Tj   % Write char
+      52 00 Td 6 0 R (b) Tj Tj   % Write char
     ET
   endstream
 endobj
@@ -54,36 +53,74 @@ endobj
   [/PDF /Text]
 endobj
 
-% Font
+% Custom font for A and char
 7 0 obj
   << /Type /Font
-    /Subtype /Type1
-    /Name /F1
-    /BaseFont /Helvetica-Bold
-    /Encoding /MacRomanEncoding
+    /Subtype /Type3
+    /FontBBox [0 0 750 750] 
+    /FontMatrix [0.001 0 0 0.001 0 0] 
+    /CharProcs 10 0 R
+    /Encoding 9 0 R
+    /FirstChar 97
+    /LastChar 98
+    /Widths [1000 1000]
   >>
 endobj
 
-8 0 obj 
-  7 0 R
+8 0 obj
+    7 0 R
 endobj
 
-9 0 obj         % Action executed on page open
-  << /Type /Action
-     /S /JavaScript
-     /JS (
-             app.alert({
-             cMsg: "Error! Try again!", cTitle: "Acme Testing Service"
-             });
-             console.clear(); 
-             console.show(); 
-             console.println("HELLO WORLD!");
-        )
-  >>
+9 0 obj
+    << /Type /Encoding
+        /Differences [97 /A /char] 
+    >>
+endobj
+
+10 0 obj
+    << /A 11 0 R
+        /char 12 0 R 
+    >>
+endobj
+
+11 0 obj
+    << /Length 500 >>
+stream
+    % The character A
+    1000 0 0 0 750 750 d1
+    701.33 0.0 m
+    455.43 694.45 l
+    245.9 694.45 l
+    0.0 0.0 l
+    174.54 0.0 l
+    217.07 122.85 l
+    484.3 122.85 l
+    526.84 0.0 l
+    701.33 0.0 l
+    closepath
+
+    436.33 261.48 m
+    265.04 261.48 l
+    350.67 508.87 l
+    436.33 261.48 l
+    f
+endstream 
+endobj
+
+12 0 obj
+    << /Length 500 >>
+stream
+    % The random character
+    1000 0 0 0 750 750 d1
+    0 0 m
+    rand 375 mod rand 750 mod l
+    rand 750 mod 0 l
+    f
+endstream 
 endobj
 
 trailer 
-  << /Size 9
+  << /Size 12
     /Root 1 0 R
   >> 
 %%EOF
