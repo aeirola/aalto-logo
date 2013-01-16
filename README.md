@@ -7,7 +7,7 @@ A collection of Aalto University Logo files that where the character after the A
 SVG
 ---
 
-The randomisation is performed with simple JavaScript that is embedded into the document and executed on rendering. The JavaScript code chooses a random path and color from predefined values using `Math.random()`.
+The randomisation is performed with simple JavaScript that is embedded into the document and executed on page load. The JavaScript code chooses a random path and color from predefined values using `Math.random()`.
 
 PostScript
 ----------
@@ -17,4 +17,6 @@ The randomisation is performed within the PostScript language. Character forms a
 PDF
 ---
 
-PDF support is not yet implemented, but possible using PDF Actions or JavaScript in the file. Sadly, these Actions are not supported by all PDF viewers.
+PDF support is not yet implemented. The PDF specification does not directly support a source of randomness. There are some possibilities for this:
+ * Embedding JavaScript in an page load action. But this is, for security reasons, not supported by many viewers.
+ * Using a custom font that produces random character. This would work using PostScript fonts, but would not enable color. 
