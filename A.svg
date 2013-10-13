@@ -5,7 +5,8 @@
 <svg version="1.1" width="8.9cm" height="8.43cm"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  onload="main()">
+  onload="main()"
+  style="background-color: white;">
   
   <title>
 		Random aalto logo.
@@ -65,7 +66,7 @@
   
   <g transform="matrix(1.25,0,0,-1.25,0,298.37125)">
     <use xlink:href='#text' fill='black' />
-    <use xlink:href='#A' file='black'/>
+    <use xlink:href='#A' fill='black'/>
     <use id='char' xlink:href='#!' fill='rgb(0,101,189)'/>
   </g>
 
